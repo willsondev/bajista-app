@@ -72,7 +72,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4 sm:p-6 relative overflow-hidden">
       {/* Imagen de fondo (bajo) */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img
@@ -83,17 +83,17 @@ const App = () => {
       </div>
 
       {/* Contenido principal (acordes) */}
-      <div className="relative z-10 w-full max-w-6xl">
+      <div className="relative z-10 w-full max-w-6xl px-4">
         {/* Título */}
-        <h1 className="text-4xl font-bold mb-8 text-blue-400">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-blue-400 text-center">
           Generador de Acordes de Bajo
         </h1>
 
         {/* Selector de acordes */}
-        <div className="mb-8 w-full max-w-md">
+        <div className="mb-4 sm:mb-8 w-full max-w-md mx-auto">
           <select
             onChange={handleAcordeChange}
-            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
           >
             <option value="">Selecciona un acorde</option>
             {Object.keys(acordes).map((nombreAcorde) => (
@@ -105,21 +105,21 @@ const App = () => {
         </div>
 
         {/* Representación visual del bajo en formato de tablatura */}
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-2xl">
+        <div className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-2xl mx-auto">
           {["sol", "re", "la", "mi"].map((cuerda) => (
-            <div key={cuerda} className="flex items-center mb-4">
-              <span className="w-12 text-right pr-4 font-mono text-gray-400">
+            <div key={cuerda} className="flex items-center mb-2 sm:mb-4">
+              <span className="w-16 sm:w-36 text-right pr-2 sm:pr-4 font-mono text-gray-400 text-sm sm:text-base">
                 {cuerda}
               </span>
               <div className="flex">
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((traste) => {
+                {[0, 1, 2, 3, 4, 5, 6].map((traste) => {
                   const nota = acorde.find(
                     (n) => n.cuerda === cuerda && n.traste === traste
                   );
                   return (
                     <div
                       key={traste}
-                      className={`w-12 h-12 flex items-center justify-center border-l border-r border-gray-600 relative ${
+                      className={`w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center border-l border-r border-gray-600 relative ${
                         nota ? "bg-blue-600 cursor-pointer hover:bg-blue-700" : "bg-gray-700"
                       }`}
                       onClick={(event) => nota && handleClickNota(nota.nota, event)} // Reproducir nota al hacer clic
@@ -132,10 +132,10 @@ const App = () => {
                         nota.traste === 0 ? (
                           <span className="text-xs text-white">aire</span>
                         ) : (
-                          <div className="w-8 h-8 rounded-full bg-blue-800 border-2 border-blue-400"></div>
+                          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-800 border-2 border-blue-400"></div>
                         )
                       ) : (
-                        <span className="text-gray-500">---</span>
+                        <span className="text-gray-500 text-xs sm:text-sm">---</span>
                       )}
                     </div>
                   );
